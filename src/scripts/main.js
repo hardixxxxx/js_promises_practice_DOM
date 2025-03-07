@@ -10,7 +10,7 @@ const firstPromise = new Promise((resolve, reject) => {
   setTimeout(reject, 3000, `First promise was rejected`);
 });
 
-const secondPromide = new Promise((resolve) => {
+const secondPromise = new Promise((resolve) => {
   document.addEventListener(
     'click',
     () => resolve(`Second promise was resolved`),
@@ -71,5 +71,5 @@ firstPromise.then(
   (errorMessage) => showMessage(errorMessage, true),
 );
 
-secondPromide.then((message) => showMessage(message));
+secondPromise.then((message) => showMessage(message));
 thirdPromise.then((message) => showMessage(message));
